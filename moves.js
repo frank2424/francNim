@@ -21,13 +21,13 @@ function main() {
 
     if (isGameOver()) {
       if (playerTurn) {
-        console.log('\x1b[31m╔══════════════════╗');
-        console.log('║   \x1b[31mYou lost XD!   \x1b[0m║');
-        console.log('╚══════════════════╝\x1b[0m');
+        //console.log('\x1b[31m╔══════════════════╗');
+        console.log('║   \x1b31m You have lost the game.    \x1b[0m');
+        //console.log('╚══════════════════╝\x1b[0m');
       } else {
-        console.log('\x1b[32m╔══════════════╗');
-        console.log('║   \x1b[32mYou won!   \x1b[0m║');
-        console.log('╚══════════════╝\x1b[0m');
+        //console.log('\x1b[32m╔══════════════╗');
+        console.log('║   \x1b[32m You have won the game!   \x1b[0m║');
+        //console.log('╚══════════════╝\x1b[0m');
       }
       break;
     }
@@ -44,7 +44,7 @@ function main() {
       pile[move[0]] -= move[1];
       playerTurn = !playerTurn;
     } else {
-      console.log('\x1b[31mInvalid move, please try again.\x1b[0m');
+      console.log('\x1b[31mInvalid move, try again.\x1b[0m');
     }
   }
 }

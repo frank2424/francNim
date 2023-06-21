@@ -25,9 +25,9 @@ const GameSetupScreen = ({ navigation }) => {
     if (
       isNaN(parsedNumberOfStacks) ||
       parsedNumberOfStacks < 3 ||
-      parsedNumberOfStacks > 7
+      parsedNumberOfStacks > 5
     ) {
-      setStacksError("Please enter a valid number of stacks (3-7)");
+      setStacksError("Please enter a valid number of stacks (3-5)");
       return;
     }
 
@@ -61,16 +61,10 @@ const GameSetupScreen = ({ navigation }) => {
         <Picker
           style={styles.picker}
           selectedValue={numberOfStacks}
-          onValueChange={(itemValue) => {
-            setNumberOfStacks(itemValue);
-            setStacksError(null); // Reset the error message when the value changes
-          }}
+          onValueChange={setNumberOfStacks}
         >
           <Picker.Item label="3" value="3" />
-
           <Picker.Item label="5" value="5" />
-       
-          <Picker.Item label="7" value="7" />
         </Picker>
         {stacksError && <Text style={styles.error}>{stacksError}</Text>}
       </View>
@@ -80,7 +74,7 @@ const GameSetupScreen = ({ navigation }) => {
         <Picker
           style={styles.picker}
           selectedValue={gameType}
-          onValueChange={(itemValue) => setGameType(itemValue)}
+          onValueChange={setGameType}
         >
           <Picker.Item label="Regular" value="regular" />
           <Picker.Item label="Misere" value="misere" />
@@ -96,30 +90,29 @@ const GameSetupScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 50,
-    paddingHorizontal: 20,
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
   },
   title: {
     fontSize: 24,
     marginBottom: 20,
+    textAlign: 'center',
   },
   inputContainer: {
     marginBottom: 20,
-    width: "100%",
   },
   label: {
     fontSize: 18,
     marginBottom: 10,
   },
   input: {
-    width: "100%",
     height: 40,
     borderColor: "gray",
     borderWidth: 1,
     padding: 5,
   },
   picker: {
-    width: "100%",
     height: 40,
   },
   button: {
@@ -127,6 +120,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,
+    alignSelf: 'center',
   },
   buttonText: {
     color: "#fff",
@@ -138,6 +132,7 @@ const styles = StyleSheet.create({
     color: "red",
     fontSize: 12,
     marginTop: 5,
+    textAlign: 'center',
   },
 });
 
