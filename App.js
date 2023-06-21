@@ -15,14 +15,15 @@ export default function App() {
         <Stack.Screen
           name="GameSetupScreen"
           component={GameSetupScreen}
-          options={{ title: 'Game Setup' }} // Set title for GameSetupScreen
+          options={{ title: 'Set up the game' }} // Set title for GameSetupScreen
         />
         <Stack.Screen
           name="SetStacks"
           component={SetStacks}
-          options={{ title: 'Set Stacks Screen' }} // Set title for Game and hide the header
+          options={{ title: 'Stack elements' }} // Set title for Game and hide the header
         />
-         <Stack.Screen name="GameScreen" component={GameScreen} />
+         <Stack.Screen name="GameScreen" component={GameScreen}
+         options={{ title: 'Have fun!' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -31,7 +32,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d1864d',
+    backgroundColor: '#dbc4b2',
     alignItems: 'center',
     justifyContent: 'flex-start',
    

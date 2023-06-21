@@ -128,7 +128,7 @@ const GameScreen = ({ route }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>List of Stack Items:</Text>
+      <Text style={styles.title}> {gameType} Nim</Text>
 
       {updatedStackItems.map((item, index) => (
         <TouchableOpacity
@@ -163,7 +163,7 @@ const GameScreen = ({ route }) => {
         </View>
       </Modal>
 
-      <Button title="Remove Elements" onPress={handleRemoveElements} />
+      {/* <Button title="Remove Elements" onPress={handleRemoveElements} /> */}
     </View>
   );
 };
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#dbc4b2',
   },
   title: {
     fontSize: 24,

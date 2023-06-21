@@ -45,7 +45,7 @@ const GameSetupScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Nim Game Setup</Text>
+      <Text style={styles.title}>Game of Nim (Franc Version)</Text>
 
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Enter your name:</Text>
@@ -65,6 +65,7 @@ const GameSetupScreen = ({ navigation }) => {
         >
           <Picker.Item label="3" value="3" />
           <Picker.Item label="5" value="5" />
+          <Picker.Item label="7" value="7" />
         </Picker>
         {stacksError && <Text style={styles.error}>{stacksError}</Text>}
       </View>
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   button: {
-    backgroundColor: "#4CAF50",
+    backgroundColor: "#5c8ded",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,

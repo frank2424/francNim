@@ -36,9 +36,9 @@ const SetStacks = ({ route, navigation }) => {
       <Modal visible={showModal} animationType="slide">
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-            <Text>Player Name: {playerName}</Text>
-            <Text>Number of Stacks: {numberOfStacks}</Text>
-            <Text>Game: {gameType}</Text>
+            <Text>Your Name: {playerName}</Text>
+            <Text>choose Stacks: {numberOfStacks}</Text>
+            <Text>Game mode: {gameType}</Text>
             <Button title="Close" onPress={closeModal} />
           </View>
         </View>
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#5c8ded',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,
